@@ -13,5 +13,11 @@
 		{
 			echo '2';
 		}
+		public function act($params)
+		{
+			##var_dump($params); // ['var1' => 'eee', 'var2' => 'bbb']
+			echo "$params[var1] + $params[var2] =  ";
+		echo  array_sum($params) ;
+		}
 		}
 		?>
