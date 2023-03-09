@@ -13,3 +13,4 @@
 			return $this->render('hello/index');
 		}
 	}
+	?>
