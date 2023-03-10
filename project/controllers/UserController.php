@@ -18,8 +18,23 @@
 	
 		public function show($params)
 		{
-		
-			echo implode(" ",$this->users[ $params['id'] ]);
+			if ($params['id']==='all') {
+				foreach($this->users as $result) {
+					echo implode(" ",$result), '<br>';
+			  }
+				
+			} else {
+				echo implode(" ",$this->users[ $params['id'] ]);
+			}
+			
 		}
+		public function info($params)
+		{
+		
+			$sank= $this->users[ $params['id'] ];
+			echo $sank[$params['key']];
+		
+		}
+		
 		}
 		?>
