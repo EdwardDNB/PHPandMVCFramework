@@ -21,8 +21,7 @@
 			if ($params['id']==='all') {
 				foreach($this->users as $result) {
 					echo implode(" ",$result), '<br>';
-			  }
-				
+				}
 			} else {
 				echo implode(" ",$this->users[ $params['id'] ]);
 			}
@@ -30,9 +29,15 @@
 		}
 		public function info($params)
 		{
-		
-			$sank= $this->users[ $params['id'] ];
+			if ($params['id']==='first') {
+				for($result=1;$result <=$params['key'] ; $result++) {
+					echo implode(" ",$this->users[ $result ]), '<br>';
+				}
+			} else {
+				$sank= $this->users[ $params['id'] ];
 			echo $sank[$params['key']];
+			}
+			
 		
 		}
 		
