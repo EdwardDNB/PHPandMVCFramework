@@ -15,7 +15,7 @@
 		}
 		public function act($params)
 		{
-			##var_dump($params); // ['var1' => 'eee', 'var2' => 'bbb']
+		
 			echo "$params[var1] + $params[var2] =  ";
 		echo  array_sum($params) ;
 		}
@@ -34,5 +34,10 @@
 		{
 			echo $this->pages[ $params['id'] ]; // выводим страницу по номеру
 		}
+		public function act_()
+		{
+			return $this->render('page/act_');
+		}
+
 		}
 		?>
