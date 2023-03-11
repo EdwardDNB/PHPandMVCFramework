@@ -52,5 +52,10 @@
 		{
 			return $this->render('products/product', $this->products[$params['n']]);
 		}
+		public function productsAll()
+		{
+			$sank=['key'=>$this->products];
+			return $this->render('products/productsAll', $sank);
+		}
 		}
 		?>
