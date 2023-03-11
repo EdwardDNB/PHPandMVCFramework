@@ -7,3 +7,15 @@
 	<li><?php echo $var2; ?></li>
 	<li><?php echo $var3; ?></li>
 </ul>
+<h1><?= $header ?></h1>
+<ul>
+	<li><?= $users[0]; ?></li>
+	<li><?= $users[1]; ?></li>
+	<li><?= $users[2]; ?></li>
+</ul>
+<h1><?= $header ?></h1>
+<ul>
+	<?php foreach ($users as $user): ?>
+		<li><?= $user; ?></li>
+	<?php endforeach; ?>
+</ul>

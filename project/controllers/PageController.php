@@ -40,6 +40,8 @@
 				'var1' => 'eee',
 				'var2' => 'bbb',
 				'var3' => 'kkk',
+				'header' => 'список юзеров',
+				'users'  => ['user1', 'user2', 'user3'],
 			]);
 		}
 
