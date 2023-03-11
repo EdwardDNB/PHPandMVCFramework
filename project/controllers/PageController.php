@@ -36,7 +36,11 @@
 		}
 		public function act_()
 		{
-			return $this->render('page/act_');
+			return $this->render('page/act_', [
+				'var1' => 'eee',
+				'var2' => 'bbb',
+				'var3' => 'kkk',
+			]);
 		}
 
 		}
