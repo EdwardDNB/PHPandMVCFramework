@@ -18,6 +18,7 @@
 	
 		public function show($params)
 		{
+			$this->title = 'Действие show контроллера UserController';
 			if ($params['id']==='all') {
 				foreach($this->users as $result) {
 					echo implode(" ",$result), '<br>';
@@ -25,10 +26,11 @@
 			} else {
 				echo implode(" ",$this->users[ $params['id'] ]);
 			}
-			
+			return $this->render('test/act_', []);
 		}
 		public function info($params)
 		{
+			$this->title = 'Действие info контроллера UserController';
 			if ($params['id']==='first') {
 				for($result=1;$result <=$params['key'] ; $result++) {
 					echo implode(" ",$this->users[ $result ]), '<br>';
@@ -37,7 +39,7 @@
 				$sank= $this->users[ $params['id'] ];
 			echo $sank[$params['key']];
 			}
-			
+			return $this->render('test/act_', []);
 		
 		}
 		
