@@ -10,7 +10,7 @@
 			echo '1';
 			return $this->render('test/act_', []);
 		}
-		
+		public $title;
 		public function show2()
 		{
 			$this->title = 'Действие show2 контроллера page';
@@ -34,12 +34,30 @@
 				3 => 'страница 3',
 			];
 		}
-	
+		private $pages1;
+		
+		public function __construct1()
+		{
+			$this->pages1 = [
+				1 => ['title'=>'страница 1', 'text'=>'текст страницы 1'],
+				2 => ['title'=>'страница 2', 'text'=>'текст страницы 2'],
+				3 => ['title'=>'страница 3', 'text'=>'текст страницы 3'],
+			];
+		
+		}
 		public function show($params)
 		{
 			$this->title = 'Действие show контроллера page';
 			echo $this->pages[ $params['id'] ]; // выводим страницу по номеру
 			return $this->render('test/act_', []);
+		}
+		public function showPage($params)
+		{
+			$this->title = $this->pages1[ $params['n']['title'] ];
+			$sunk= $this->pages1[ $params['n']['text'] ]; // выводим страницу по номеру
+			return $this->render('page/act_page', [
+				'text' => $sunk
+			]);
 		}
 		public function act_()
 		{
