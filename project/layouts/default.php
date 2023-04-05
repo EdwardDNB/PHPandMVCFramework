@@ -13,14 +13,14 @@
 			<aside class="sidebar_left">
 				левый сайдбар
 			</aside>
-			<main>
-				<?= $content ?>
-				<p><a href="https://www.Youtube.com/"><img src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" style="width:50px;height:50px;"></a></p>
-			</main>
 			<aside class="sidebar_right">
 				правый сайдбар
 			</aside>
 		</div>
+		<main>
+				<?= $content ?>
+				<p><a href="https://www.Youtube.com/"><img src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" style="width:50px;height:50px;"></a></p>
+			</main>
 		<footer>
 			футер сайта
 		</footer>
