@@ -4,6 +4,7 @@
 	
 	class TestController extends Controller
 	{
+		public $title;
 		public function act1()
 		{
 			$this->title = 'Действие act1 контроллера test';
