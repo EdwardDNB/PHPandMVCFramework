@@ -16,6 +16,8 @@
 		new Route('/user/first/:n/', 'user', 'first'),
 		new Route('/act_/', 'page', 'act_'),
 		new Route('/test/', 'page', 'test'),
+		new Route('/page/:id', 'page', 'one'),
+		new Route('/pages/',   'page', 'all'),
 		new Route('/page/:n/', 'page', 'showPage'),
 		new Route('/product/:n/', 'product', 'product'),
 		new Route('/products/all/', 'product', 'productsAll'),

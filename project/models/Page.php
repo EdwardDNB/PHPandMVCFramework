@@ -19,4 +19,6 @@
 			return $this->findMany("SELECT * FROM page 
 				WHERE id>=$from AND id<=$to"); 
 		}
+	
+		
 	}
