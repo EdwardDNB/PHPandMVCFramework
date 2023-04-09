@@ -18,6 +18,8 @@
 		new Route('/test/', 'page', 'test'),
 		new Route('/page/:id', 'page', 'one'),
 		new Route('/pages/',   'page', 'all'),
+		new Route('/product/:id', 'product', 'one'),
+		new Route('/products/',   'product', 'all'),
 		new Route('/page/:n/', 'page', 'showPage'),
 		new Route('/product/:n/', 'product', 'product'),
 		new Route('/products/all/', 'product', 'productsAll'),

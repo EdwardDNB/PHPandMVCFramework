@@ -1,10 +1,36 @@
 <?php
 	namespace Project\Controllers;
 	use \Core\Controller;
-	
+	use \Project\Models\Product; // подключаем нашу модель
+
 	class ProductController extends Controller
 	{
+		public $title;
+		public function one($params)
+		{
+			$product = (new Product) -> getById($params['id']);
+			
+			$this->title = $product['title'];
+			return $this->render('products/one', [
+				
+				'h1' => $this->title,
+				'price' => $product['price'],
+				'quantity' => $product['quantity'],
+				'description' => $product['description']
+			]);
+		}
 		
+		public function all()
+		{
+			$this->title = 'Список всех Products';
+			
+			$products = (new Product) -> getAll();
+			return $this->render('products/all', [
+				'products' => $products,
+				'h1' => $this->title,
+				
+			]);
+		}
 		
 		private $products;
 		
